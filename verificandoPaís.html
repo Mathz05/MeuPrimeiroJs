@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+    <style>
+        body{
+            background-color: black;
+            color: chocolate;
+            font: normal 18pt Arial;
+            text-align: center;
+            margin-top: 5%;
+            
+        } #res{
+            margin-top: 0.5%;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Vc é da onde?</h1>
+    Minha nascionalidade: <input type="text" name="de onde eu sou" id="país">
+    <input type="button" value="verificando" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar(){
+            var b = document.getElementById("país")
+            var res = document.getElementById("res")
+            var p = String(b.value)
+
+            if(p == 'Brasil'){
+                res.innerHTML = 'Vc é brasileiro'
+            }else if ( p !="Brasil"){
+                res.innerHTML = 'Vc é estrangeiro(a)'
+            }
+        
+        }
+    </script>
+
+</body>
+</html>
